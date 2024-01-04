@@ -1,0 +1,563 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;  
+    display: grid;
+    min-height: 100vh;
+    font-family: sans-serif;
+    grid-template-rows: min-content min-content min-content min-content min-content;
+    grid-template-areas:
+    "header"
+    "sub-header"
+    "main"
+    "contenido"
+    "cards"
+    "footer";
+}
+
+a{
+    text-decoration: none;
+}
+
+.linea{
+    margin: 20px 5vw 1vh 5vw;
+    height: 3px;
+    background-color: rgb(0, 255, 30);
+    min-width: 300px;
+  }
+
+.header{
+    grid-area: header;
+    display: grid;
+    font-size: 2vmax;
+    align-content: center;/*alinea en el eje y*/
+    justify-items: end;/*alinea en el eje x*/
+    min-height: 75.03px;
+    background: -webkit-linear-gradient(rgb(133, 238, 133), yellow, transparent);
+}
+
+.ingenieria{
+    margin: .5vh 1.5vw .5vh 0;
+    padding: 1rem;
+    font-style: Italic;
+    font-size: 2.4vmax;
+    background: linear-gradient( 18deg, #b0f177, white 50%, rgb(244, 244, 91) 90%);
+    color: black;
+    max-height: 63px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.sub-header{
+    grid-area: sub-header;
+    display: grid;
+    align-content: center;/*alinea en el eje y*/
+    justify-items: start; /*alinea en el eje x*/
+    background: -webkit-linear-gradient(transparent, yellow, rgb(133, 238, 133));
+
+}
+
+.logo-jc{
+    border-radius: 50% 5px 50% 50%;
+    min-height: 4rem;
+    min-width: 4rem;
+    background-image: url(../img/img-mi-web/logo-black-fondo-color-compressed.png);
+    background-size: cover;
+    background-position: center;
+    margin: 1vh 0 .5vh 1vw;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgb(187, 251, 230), white);
+    width: 100%;
+    margin: auto;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.contenido{
+    grid-area: contenido;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); */
+    /* align-content: center; */
+    /* justify-items: center; */
+    min-height: 100vh;
+    /* background-image: url(../img/img-mi-web/cala-de-las-sirenas.jpg); */
+
+    background-image: linear-gradient(white, rgb(187, 251, 230),white);
+
+    /* background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 0; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(600px,1fr)); */
+    /* justify-items: center; */
+}
+
+.contenido-contenido{
+    /* background-image: linear-gradient(rgb(187, 251, 230), white); */
+    background-image: url(../img/img-mi-web/cala-de-las-sirenas-compressed.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+}
+
+
+.h1{
+    text-align: center;
+    font-size: 1.5vmax;
+    background: linear-gradient(18deg, rgb(244, 244, 91), white 50%, rgb(176, 241, 119) 90%);
+    width: 80vw;
+    min-height: 5vh;
+    margin: auto;
+    border-radius: 10px;
+    min-width: 300px;
+    margin-top: 1vh;
+}
+
+h1 {
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+}
+
+h1:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, red, yellow);
+    mix-blend-mode: screen; /**atento a esta linea**/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.texto{
+    max-width: 80vw;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    font-family: sans-serif;
+    font-size: 1.3vmax;
+    color: white;
+    background-image: url(../img/img-mi-web/racimos-de-uvas-1-compressed.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    min-width: 300px;
+}
+
+.naranjas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px,1fr));
+    justify-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.naranjas-derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cabecera{
+    background: linear-gradient( 18deg, #b0f177, white 50%, rgb(244, 244, 91) 90%);
+    border-radius: 7px;
+    text-align: center;
+    margin: 0;
+    width: 350px;
+  }
+
+  h3{
+    margin: 1vh 0;
+    font-style: italic;
+    color: red;
+    /* width: 350px; */
+    /* text-align: center; */
+    /* text-align: center; */
+  }
+
+  h3:hover{
+    transition: all 500ms ease;
+    /* font-size: 20px; */
+    color: lightgreen;
+}
+
+
+.off-canvas-btn{
+    position: fixed;
+    bottom: .5rem;
+    right: .5rem;
+    z-index: 999;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    /* opacity: .25; */
+    opacity: 0;
+}
+
+.off-canvas-burger{
+    position: fixed;
+    bottom: .5rem;
+    right: .5rem;
+    z-index: 998;
+    width: 3rem;
+    height: .6rem;
+    background-color: red;
+    border-radius: .3rem;
+    transform: rotate(0deg) translate(0, -1.2rem);
+    transform-origin: top left;
+    transition: transform .5s ease, background-color 500ms ease;
+
+}
+
+.off-canvas-burger::before,
+.off-canvas-burger::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: .6rem;
+    background-color: red;
+    border-radius: .3rem;
+    transition: transform 500ms ease;
+}
+
+.off-canvas-burger::before{
+    transform: rotate(0deg) translate(0, -.9rem);
+    /* background-color: blue; */
+}
+
+.off-canvas-burger::after{
+    transform: rotate(0deg) translate(0, .3rem);
+    /* background-color: green; */
+}
+
+.off-canvas-btn:checked + .off-canvas-burger{
+    background-color: transparent;
+}
+
+.off-canvas-btn:checked +.off-canvas-burger::before{
+    transform: rotate(45deg) translate(0,0);
+}
+
+.off-canvas-btn:checked +.off-canvas-burger::after{
+    transform: rotate(-45deg) translate(.4rem, -.5rem);
+}
+
+.off-canvas-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    z-index: 997;
+    display: flex;
+    max-width: 20vw;
+    justify-content: center;
+    align-items: center;
+    opacity: .8;
+    transition: transform 700ms ease;
+    transform: translate(0, 100%);
+}
+
+.off-canvas-btn:checked ~ .off-canvas-menu{
+    transform: translate(0, 0);
+}
+
+.off-canvas-menu-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: rebeccapurple; */
+}
+
+.off-canvas-link{
+    border-bottom: thin solid #d00;
+    padding: 2rem;
+    font-size: 1.5vmax;
+    text-align: center;
+    font-style: italic;
+    text-decoration: none;
+    color: white;
+    transition: background-color 300ms ease;
+}
+
+.off-canvas-link:first-child{
+    border-top: thin solid #d00;
+
+}
+
+.off-canvas-link:hover{
+    background-color: #d005;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    width: vw;
+    height: 5vh;
+    /* border-radius: 10px; */
+    display: grid;
+    align-content: center;/*alinea en el eje y*/
+    grid-template-columns: min-content min-content;
+    grid-template-areas:
+    "copyright"
+    "yo"
+}
+
+@media screen and (max-width: 1000px){
+
+/* .contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+.contenido-contenido{
+    /* grid-area: contenido;
+    display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); */
+    /* align-content: center; */
+    /* justify-items: center; */
+    /* min-height: 100vh;
+    background-image: url(../img/img-mi-web/cala-de-las-sirenas.jpg); */
+    /* background: linear-gradient(rgb(187, 251, 230), white); */
+    background-image: url(../img/img-mi-web/cala-de-las-sirenas-compressed.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* margin:20vh 0; */
+
+
+}
+}
+
+@media screen and (max-width: 350px){
+    .main,
+    .contenido,
+    .header,
+    .sub-header
+    {
+    /* width: 100vw; */
+    /* display: grid; */
+    /* justify-items: center; */
+    /* align-content: center; */
+    /* margin: .5 0 .5 0; */
+    /* background-image: none; */
+    /* background-color: rgb(221, 255, 244, .35); */
+    /* margin: 0 5vw 0 5vw; */
+    /* position: relative; */
+    }
+
+/* .footer{
+    width: 100vw;
+    margin: .5 0 .5 0;
+    margin: 0 5vw 0 5vw;
+    border-radius: 10px;
+} */
+    
+}
+
+  
+@media screen and (max-width: 649px){
+
+.header, .sub-header{
+    justify-items: center;
+}
+ 
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.texto{
+    height : 8vh;
+}
+
+.naranjas .naranjas-izquierda:nth-child(1){
+    order: 1; 
+} /*cuanto mayor el número más atrás se pone*/
+   
+.naranjas-derecha h3{
+    font-size: 16px;
+    text-align:center;
+}
+
+.linea{
+    visibility: hidden;
+}
+
+.naranjas-derecha{
+    background-image: linear-gradient(rgb(187, 251, 230), white);
+
+}
+.naranjas{
+    border: medium solid rgb(0, 255, 30);
+    border-radius: 10px;
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: min-content;
+    /*alinea en el eje x*/
+}
+
+.cabecera{
+    border-radius: 10px 10px 0 0;
+    margin: 0 -.8px;
+}
+}
+
+@media screen and (max-width: 500px){
+
+.off-canvas-btn{
+    position: fixed;
+    bottom: .5rem;
+    right: .5rem;
+    z-index: 999;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    /* opacity: 1; */
+    /* opacity: .5; */
+}
+
+.off-canvas-burger{
+    position: fixed;
+    bottom: .5rem;
+    right: .5rem;
+    z-index: 998;
+    width: 2rem;
+    height: .5rem;
+    background-color: red;
+    border-radius: .3rem;
+    transform: rotate(0deg) translate(0, -1.2rem);
+    transform-origin: top left;
+    transition: transform .5s ease, background-color 500ms ease;
+
+}
+
+.off-canvas-burger::before,
+.off-canvas-burger::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: .5em;
+    background-color: red;
+    border-radius: .3rem;
+    transition: transform 500ms ease;
+}
+
+.off-canvas-burger::before{
+    transform: rotate(0deg) translate(0, -.8rem);
+    /* background-color: blue; */
+}
+
+.off-canvas-burger::after{
+    transform: rotate(0deg) translate(0, .25rem);
+    /* background-color: green; */
+}
+
+.off-canvas-btn:checked + .off-canvas-burger{
+    background-color: transparent;
+}
+
+.off-canvas-btn:checked +.off-canvas-burger::before{
+    transform: rotate(45deg) translate(0,0);
+}
+
+.off-canvas-btn:checked +.off-canvas-burger::after{
+    transform: rotate(-45deg) translate(.3rem, -.43rem);
+}
+
+.off-canvas-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    z-index: 997;
+    display: flex;
+    max-width: 30vw;
+    justify-content: center;
+    align-items: center;
+    opacity: .8;
+    transition: transform 700ms ease;
+    transform: translate(0, 100%);
+}
+
+.off-canvas-btn:checked ~ .off-canvas-menu{
+    transform: translate(0, 0);
+}
+
+.off-canvas-menu-container{
+    min-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* background-color: rebeccapurple; */
+}
+
+.off-canvas-link{
+    border-bottom: thin solid #d00;
+    /* padding: 2rem; */
+    /* font-size: 1.5rem; */
+    /* text-align: center; */
+    /* margin-left: 0; */
+    padding-left: 0;
+    /* text-decoration: none; */
+    /* color: white; */
+    /* transition: background-color 300ms ease; */
+}
+
+.off-canvas-link a{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.off-canvas-link:first-child{
+    border-top: thin solid #d00;
+
+}
+
+.off-canvas-link:hover{
+    background-color: #d005;
+}
+
+}
+

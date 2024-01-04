@@ -1,0 +1,673 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    /* padding: 0;
+    margin: 0; */
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* margin: 0;  
+    padding: 0; */
+    display: grid;
+    min-height: 10vh;
+    grid-template-rows: min-content min-content min-content min-content min-content min-content;
+    grid-template-areas:
+    "header"
+    "sub-header"
+    "main"
+    "contenido"
+    "section"
+    "footer";
+}
+
+a{
+    text-decoration: none;
+}
+
+.linea{
+    margin: 20px 5vw 20px 5vw;
+    height: 3px;
+    background-color: rgb(0, 255, 30);
+    min-width: 300px;
+  }
+
+.header{
+    grid-area: header;
+    display: grid;
+    font-size: 2vmax;
+    align-content: center;/*alinea en el eje y*/
+    justify-items: end;/*alinea en el eje x*/
+    min-height: 75.03px;
+    background: -webkit-linear-gradient(grey, silver, transparent);
+}
+
+.ingenieria{
+    margin: .5vh 1vw .5vh 0;
+    padding: 1rem;
+    font-family: sans-serif;
+    font-style: Italic;
+    font-size: 2.4vmax;
+    background: linear-gradient( 18deg, #b0f177, white 50%, rgb(244, 244, 91) 90%);
+    color: black;
+    max-height: 63px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.sub-header{
+    grid-area: sub-header;
+    display: grid;
+    align-content: center;/*alinea en el eje y*/
+    justify-items: start; /*alinea en el eje x*/
+    background: -webkit-linear-gradient(transparent, silver, grey);
+}
+
+.logo-jc{
+    border-radius: 50% 5px 50% 50%;
+    min-height: 4rem;
+    min-width: 4rem;
+    background-image: url(../img/img-mi-web/logo-black-fondo-color-compressed.png);
+    background-size: cover;
+    background-position: center;
+    margin: 1vh 0 .5vh 1.5vw;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgb(187, 251, 230), white);
+    width: 100%;
+    margin: auto;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-image: url(../img/img-mi-web/arandanos-compressed.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* border-radius: 10px; */
+    /* margin-top: 1vh;
+    margin-bottom: 1vh; */
+    /* min-width: 350px; */
+
+}
+
+.h1{
+    text-align: center;
+    font-size: 1.3vmax;
+    background: linear-gradient(18deg, rgb(244, 244, 91), white 50%, rgb(176, 241, 119) 90%);
+    width: 70vw;
+    /* min-height: 5vh; */
+    margin: auto;
+    border-radius: 10px;
+    min-width: 250px;
+    margin-top: 1vh;
+    
+}
+
+main .historia{
+    margin-bottom: 1vh;
+    background: linear-gradient(18deg, rgb(195, 195, 180), white 50%, rgb(141, 240, 187) 90%);
+}
+
+h1 {
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+    margin: 2vh;
+}
+
+h1:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, red, yellow);
+    mix-blend-mode: screen; /**atento a esta linea**/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.texto{
+    background-image: linear-gradient(rgb(187, 251, 230), white);
+    max-width: 90vw;
+    /* min-height: 5vh; */
+    display: flex;
+    /* align-items: center; */
+    text-align: center;
+    /* justify-content: center; */
+    margin: auto;
+    font-family: sans-serif;
+    font-size: 1.3vmax;
+    color: rgba(0,0,0,1);
+    border-radius: 10px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    min-width: 250px;
+    height: auto;
+    justify-content: center;
+
+    /* background-image: url(../img/img-mi-web/arandanos-compressed.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    min-width: 300px; */
+}
+
+.texto > h2{
+  /* padding: 0; */
+  margin: .25vh .25vw;
+}
+
+.text h3{
+    margin: 0 0 0 1vw; 
+}
+
+.contenido{
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    align-content: center;/*alinea en el eje y*/
+    justify-items: center;
+    min-height: 100vh;
+    background-image: url(../img/img-mi-web/foto-compressed.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.contenido-historia{
+    background-image: url(../img/img-mi-web/el-mar-y-almeria.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px,1fr));
+    justify-items: center;
+}
+
+.section{
+    grid-area: section;
+    display: grid;
+    justify-items: center;
+}
+
+.cajas{
+    width: 30vw;
+    min-width: 250px;
+    height: 30vh;
+    margin: .5rem 3rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cajas a{
+    color: black;
+    text-decoration: none;
+    transition: 700ms;
+    /* font-size: 33px; */
+    font-size: 175%;
+
+}
+
+.caja-izquierda,
+.caja-central,
+.caja-derecha
+{
+    display: grid;
+    align-content: center;/*alinea en el eje x*/
+    justify-items: center;/*alinea en el eje y*/
+    background-image: url(../img/img-mi-web/pitahaya-1-compressed.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* font-size: 40px; */
+    opacity: .25;
+    transition: 700ms;
+}
+
+.caja-izquierda{
+    background-image: url(../img/img-mi-web/pitahaya-1-compressed.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.caja-izquierda-historia{
+    background-image: url(../img/img-mi-web/velazquez-bodegon-de-naranjas.jpg);
+    min-width: 40vw;
+    height: 50vh;
+    min-width: 400px;
+}
+
+.caja-izquierda-historia a{
+    font-size: 2vmax;
+
+}
+
+
+.caja-central{
+    background-image: url(../img/img-mi-web/pimientos-compressed.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.caja-derecha{
+    background-image: url(../img/img-mi-web/verduras-1-compressed.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.caja-derecha-historia{
+    background-image: url(../img/img-mi-web/propiedades-de-la-naranja.jpg);
+    min-width: 40vw;
+    height: 50vh;
+    min-width: 400px;
+}
+
+.caja-derecha-historia a{
+    font-size: 2vmax;
+}
+
+.cajas:hover{
+    opacity: 1;
+}
+
+.caja-izquierda a:hover{
+    color:rgba(234, 255, 0,.75);
+}
+
+.caja-izquierda-historia a:hover{
+    color: lightgray
+}
+
+.caja-central a:hover{
+    color: rgba(255,0,0,0.75);
+}
+
+.caja-derecha a:hover{
+    color: rgba(5, 207, 5,.75);
+}
+
+.caja-derecha-historia a:hover{
+    color: red;
+}
+
+.copy-y-nombre{
+  display: flex;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    /* height: 5vh; */
+    /* border-radius: 10px; */
+    display: grid;
+    align-content: center;/*alinea en el eje y*/
+    justify-content: space-evenly;
+    grid-template-columns: min-content min-content;
+    grid-template-areas:
+    "copy-y-nombre"
+    "mail-twitter-instagram"
+}
+
+.mail-twitter-instagram{
+  display: flex;
+  /* justify-content: space-evenly; */
+}
+
+.mi-mail,
+.mi-twitter,
+.mi-instagram{
+  margin: 0 5px;
+  padding: 0 5px;
+}
+
+[id]{
+    scroll-margin-top: 7rem;
+}
+
+/* h2{
+    padding: .25vh 0 0 0;
+} */
+
+.copyright{
+    margin: 0 0 0 1vw;
+}
+
+.copy-y-nombre{
+  padding: 20px 0;
+  
+}
+
+.mi-correo{
+  padding: 1.5px 5vw 0 5vw;
+}
+.mi-twitter{
+  padding: 1.5px 3vw 0 0;
+}
+
+.mi-instagram{
+  padding: .75vh 0 0 2.5vw;
+}
+
+.mail-twitter-instagram{
+  padding: 10px 0;
+}
+
+.historia-de-la-naranja, .propiedades-de-la-naranja{
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
+    font-family: arial;
+    font-style: italic;
+    margin: 0;
+}
+ .historia-de-la-naranja, .propiedades-de-la-naranja{
+    text-align: center;
+    min-width: 90vw;
+    background: linear-gradient(18deg, rgb(176, 241, 119), white 50%, rgb(198, 198, 177)90%);
+    margin: 1vh 1vw;
+    padding: 1vh 0;
+    border-radius: 10px;
+    font-size: 2.2vmax;
+
+}
+
+.container-historia-de-la-naranja a,
+.container-beneficios-y-propiedades-de-la-naranja a{
+    color: gray;
+}
+
+.container-beneficios-y-propiedades-de-la-naranja, .container-historia-de-la-naranja{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: normal;
+    font-size: 16px;
+    letter-spacing: normal;
+  }
+
+  .beneficios-y-propiedades-de-la-naranja,
+  .texto-general-historia-de-la-naranja, 
+  .texto-general-historia-de-la-naranja-en-almeria
+  {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    margin: auto;
+    font-family: sans-serif;
+    color: rgb(125, 123, 123);
+    text-align: justify;
+  }
+
+  .tiempo-de-lectura{
+    display:flex;
+    align-items: center;
+    /* margin: 0; */
+    /* padding: 1vh 0; */
+  }
+   
+  .presentacion-propiedades-de-la-naranja{
+    font-size: 16px;
+    text-align: justify;
+    margin: 1vw;
+    padding-bottom: 2vw ;
+    color: black;
+  }
+  
+  .naranja-resumen-del-contenido, .resumen-naranjas-che{
+    max-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: auto;
+    padding: 1vw 0;
+    align-items: left;
+    background-color: rgb(203, 240, 240);
+    min-width: 390px;
+  }
+  .resumen-naranjas-che{
+    background-color: white;
+    align-items: right;
+  
+  }
+  
+  .resumen-naranjas-che a{
+    color: rgb(155, 247, 16);
+    background-color: white;
+    text-decoration-color:rgb(155, 247, 16);
+  }
+  
+  .tabla-naranja-resumen-del-contenido{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  
+  .tabla-naranja-resumen-del-contenido a{
+    margin: 1vh 0;
+  }
+  
+  .tabla-naranja-resumen-del-contenido p:nth-child(n), .tabla-naranja-resumen-del-contenido .p{
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 2vh 1vw;
+  }
+  
+  
+  .tabla-naranja-resumen-del-contenido a:nth-child(n){
+    margin-left: 5vw;
+  }
+  
+  .tabla-naranja-resumen-del-contenido a:nth-child(n+12){
+    margin-left: 1vw;
+    text-decoration: underline;
+  }
+  
+  
+  .naranja-cabecera-resumen-del-contenido{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .tabla-de-propiedades{
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    margin: auto;
+    border: thin solid black;
+    align-items: center;
+    border-radius: 10px;
+    min-width: 538px;
+  }
+  
+  .tabla-de-propiedades h4{
+    background-color: lightblue;
+    min-width: 100%;
+    text-align: center;
+    padding: 1vh 0;
+    color: white;
+  }
+  
+  .tabla-de-propiedades .h4-superior{
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .tabla-de-propiedades .h4-inferior{
+    margin: 0;
+    border-radius: 0 0 10px 10px;
+  }
+  .contenedor-elementos-y-resultados-tabla-de-propiedades{
+    display:flex;
+    flex-direction: row;
+    min-width: 100%;
+    justify-content: center;
+  }
+  
+  
+  .elementos-tabla-propiedades{
+    margin-left: 1vw;
+    min-width: 50%;
+  }
+  
+  
+  .resultados-tabla-propiedades{
+    margin-right: 1vw;
+    min-width: 50%;
+  
+  }
+  
+  .elementos-tabla-propiedades p, .resultados-tabla-propiedades p{
+    padding: .5vw 0;
+    text-align: center;
+  }
+  
+  .elementos-tabla-propiedades p:nth-child(even), .resultados-tabla-propiedades p:nth-child(even){
+    background-color: yellowgreen;
+    color: white;
+  }
+  
+  .elementos-tabla-propiedades p:nth-child(odd), .resultados-tabla-propiedades p:nth-child(odd){
+    background-color: rgb(247, 226, 36);
+    color: black;
+  }
+  
+  .border-text-indent{
+    margin: 2.5vh 0;
+  }
+  
+  .text-indent{
+    max-width: 80vw;
+    margin: auto;
+    background-color: rgba(247, 154, 229, .35);
+    padding: 1vh 1vw;
+    color: black;
+    border: thin solid#f8c2ed;
+    border-radius: 10px;
+    text-align: justify;
+  }
+
+
+  .btn-volver{
+    position: fixed;
+    top: 1rem;
+    left: .25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+    z-index: 1;
+  }
+
+  .btn-volver p,
+  .btn-volver a{
+    margin: 0;
+    font-size: 12px;
+  }
+
+
+
+@media screen and (max-width:1200px){
+    .contenido-historia{
+    display: grid;
+    justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+  .footer,
+  .header,
+  .sub-header,
+  .contenido{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-evenly;
+
+}
+  .cajas{
+    height: 25vh;
+
+  }
+
+  .footer{
+    min-height: 10vh;
+  }
+  
+}
+
+/* @media screen and (max-width: 350px){ 
+    .main,
+    .contenido,
+    .header,
+    .sub-header,
+    .section-historia
+    {
+    /* width: 100vw; */
+    /* display: grid;
+    justify-items: center; */
+    /* align-content: center; */
+    /* margin: .5 0 .5 0; */
+    /* background-image: none; */
+    /* background-color: rgb(221, 255, 244, .35); */
+    /* margin: 0 5vw 0 5vw; */
+    /* position: relative; */
+    /* } */
+ /* */ 
+
+/* .footer{
+    width: 100vw;
+    margin: .5 0 .5 0;
+    margin: 0 5vw 0 5vw;
+    border-radius: 10px;
+}
+
+}
+ */
+/*De 1024 pixels para arriba coge todo lo de*/
+@media (min-width: 1024px){
+    .presentacion-propiedades-de-la-naranja{
+        font-size: 20px;
+        text-align: justify;
+        margin: 1vw 0 0 0;
+      }
+      
+      .container-beneficios-y-propiedades-de-la-naranja, .container-historia-de-la-naranja{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          line-height: 1.6rem;
+          font-size: 18px;
+          letter-spacing: .11rem;
+        }
+        .text-indent{
+        max-width: 70vw;
+      }
+
+} 

@@ -1,0 +1,416 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    /* width: 100vw; */
+    font-family: sans-serif;
+    grid-template-columns: 100vw;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-areas:
+    "header"
+    "sub-header"
+    "main";
+}
+
+.header{
+    grid-area: header;
+    display: grid;
+    font-size: 2vmax;
+    align-content: center;/*alinea en el eje y*/
+    justify-items: end;/*alinea en el eje x*/
+    min-height: 75.03px;
+    background: -webkit-linear-gradient(rgb(133, 238, 133), yellow, transparent);
+}
+
+.ingenieria{
+    margin: .5vh 1.5vw .5vh 0;
+    padding: 1rem;
+    font-style: Italic;
+    font-size: 2.4vmax;
+    background: linear-gradient( 18deg, #b0f177, white 50%, rgb(244, 244, 91) 90%);
+    color: black;
+    max-height: 63px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.sub-header{
+    grid-area: sub-header;
+    display: grid;
+    align-content: center;/*alinea en el eje y*/
+    justify-items: start; /*alinea en el eje x*/
+    background: -webkit-linear-gradient(transparent, yellow, rgb(133, 238, 133));
+
+}
+
+.logo-jc{
+    border-radius: 50% 5px 50% 50%;
+    min-height: 4rem;
+    min-width: 4rem;
+    background-image: url(../img/img-mi-web/logo-black-fondo-color-compressed.png);
+    background-size: cover;
+    background-position: center;
+    margin: 1vh 0 .5vh 1vw;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgb(187, 251, 230), white);
+    width: 100%;
+    margin: auto;
+    /* position: sticky;
+    top: 0px;
+    z-index: 1; */
+}
+
+.h1{
+    text-align: center;
+    font-size: 1.5vmax;
+    background: linear-gradient(18deg, rgb(244, 244, 91), white 50%, rgb(176, 241, 119) 90%);
+    width: 80vw;
+    min-height: 5vh;
+    margin: auto;
+    border-radius: 10px;
+    min-width: 300px;
+    margin-top: 1vh;
+}
+
+h1 {
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+}
+
+h1:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, red, yellow);
+    mix-blend-mode: screen; /**atento a esta linea**/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.texto{
+    width: 80vw;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    font-family: sans-serif;
+    font-size: 1.3vmax;
+    color: white;
+    background-image: url(../img/img-mi-web/naranjal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    min-width: 300px;
+}
+
+.cabecera-naranjas-de-mesa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    background: linear-gradient( 18deg, rgb(253, 206, 119), yellow, white, yellow,rgb(253, 206, 119));
+    margin: .25vh 0 0vh 0;
+    padding: 0 1vw;
+    border-radius: 10px;
+    font-size: 1.6vmax;
+    min-width: 300px ;
+    margin: auto;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px,1fr));
+    justify-items: center;
+    margin: 1vh 0 0 0;
+}
+
+.card{
+    border: 1.5px solid gray;
+    border-radius: 10px;
+    box-shadow: 5px 6px 5px -2px rgba(0,0,0,0.27);
+    margin: 1.5vh 0 1vh 0;
+    transition: all 500ms ease;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat (min-max(250px,1fr));
+    grid-template-rows: 180px min-content min-content;
+    max-width: 250px;
+    min-width: 250px;
+    opacity: .5;
+    grid-template-areas:
+    "imagen"
+    "titulo"
+    "enlaces-descripcion-y-caracteristicas";
+}
+
+.imagen{
+    margin-top: 10px;
+    grid-area: imagen;
+    display: grid;
+    align-items: top;/*alinea en el eje y*/
+    justify-content: center;
+}
+
+.titulo{
+    grid-area: titulo;
+    height: 200px;
+    display: grid;
+    align-content: center;/*Alinea en el Eje y*/
+    justify-content: center;/*Alinea en el eje x*/
+    background-image: linear-gradient(white, rgb(187, 251, 230));
+    min-width: 248px;
+    color: red;
+}
+
+.enlaces-descripcion-y-caracteristicas{
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(255, 35, 1, 0.75), rgb(255, 206, 115));
+    display: grid;
+    justify-items: center;/*Alinea en el eje x*/
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.enlaces-descripcion-y-caracteristicas a:hover,
+.navelina-caracteristicas a:hover,
+.navel-foyos-caracteristicas a:hover,
+.navel-lane-late-caracteristicas a:hover,
+.navel-powell-caracteristicas a:hover,
+.salustiana-caracteristicas a:hover,
+.valencia-late-caracteristicas a:hover,
+.valencia-delta-caracteristicas a:hover
+{
+    transition: all 500ms ease;
+    font-size: 20px;
+    color: lightgreen;
+}
+
+.enlaces{
+    background-color: rgb(187, 251, 230);
+    border-radius: 0 0 10px 10px;
+}
+
+.navelina-ir-a-descripcion a,
+.navelina-ir-a-caracteristicas a,
+.navel-foyos-ir-a-descripcion a,
+.navel-foyos-ir-a-caracteristicas a,
+.navel-lane-late-ir-a-descripcion a,
+.navel-lane-late-ir-a-caracteristicas a,
+.navel-powell-ir-a-descripcion a,
+.navel-powell-ir-a-caracteristicas a,
+.salustiana-ir-a-descripcion a,
+.salustiana-ir-a-caracteristicas a,
+.valencia-late-ir-a-descripcion a,
+.valencia-late-ir-a-caracteristicas a,
+.valencia-delta-ir-a-descripcion a,
+.valencia-delta-ir-a-caracteristicas a
+{
+    color: white;
+}
+
+.card:hover,
+.navelina-descripcion:hover,
+.navelina-caracteristicas:hover,
+.navel-foyos-descripcion:hover,
+.navel-foyos-caracteristicas:hover,
+.navel-lane-late-descripcion:hover,
+.navel-lane-late-caracteristicas:hover,
+.navel-powell-descripcion:hover,
+.navel-powell-caracteristicas:hover,
+.salustiana-descripcion:hover,
+.salustiana-caracteristicas:hover,
+.valencia-late-descripcion:hover,
+.valencia-late-caracteristicas a:hover,
+.valencia-delta-descripcion:hover,
+.valencia-delta-caracteristicas:hover
+
+{
+    transform: translateY(-15px);
+    box-shadow: 5px 6px 5px 1px rgba(0,0,0,0.27);
+    opacity: 1;
+}
+
+/*--------------------Empieza descripción---------------*/
+
+.descripciones-y-caracteristicas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(95vw,1fr));
+    align-content: center;
+    margin: 1vh 0;
+}
+
+.descripciones-y-caracteristicas a{
+    text-decoration: none;
+}
+
+.linea{
+    margin: 20px 5vw 20px 5vw;
+    height: 3px;
+    background-color: rgb(0, 255, 30);
+    min-width: 300px;
+  }
+
+  .linea-corta{
+    height: 3px;
+    background-color: yellowgreen;
+    max-width: 325px;
+    display: flex;
+    margin: auto;
+    /* display: none !important; */
+  }
+
+.navelina-descripcion, 
+.navelina-caracteristicas,
+.navel-foyos-descripcion,
+.navel-foyos-caracteristicas,
+.navel-lane-late-descripcion,
+.navel-lane-late-caracteristicas,
+.navel-powell-descripcion,
+.navel-powell-caracteristicas,
+.salustiana-descripcion,
+.salustiana-caracteristicas,
+.valencia-late-descripcion,
+.valencia-late-caracteristicas,
+.valencia-delta-descripcion,
+.valencia-delta-caracteristicas
+{
+    border: 1.5px solid gray;
+    border-radius: 10px;
+    box-shadow: 5px 6px 5px -2px rgba(0,0,0,0.27);
+    margin: 1.5vh 0;
+    transition: all 500ms;
+    line-height: 1.6rem;
+    font-size: 18px;
+    background-image: linear-gradient(white, rgb(187, 251, 230));
+    opacity: .5;
+    min-width: 250px;
+}
+
+.navelina-descripcion,
+.navel-foyos-descripcion,
+.navel-lane-late-descripcion,
+.navel-powell-descripcion,
+.salustiana-descripcion,
+.valencia-late-descripcion,
+.valencia-delta-descripcion
+{
+    text-align: justify;
+}
+
+.navelina-caracteristicas p,
+.navel-foyos-caracteristicas p,
+.navel-lane-late-caracteristicas p,
+.navel-powell-caracteristicas p,
+.salustiana-caracteristicas p,
+.valencia-late-caracteristicas p,
+.valencia-delta-caracteristicas p
+{
+    font-size: 16px;
+    margin: 0 1vw 0 1vw;
+}
+
+.navelina-caracteristicas a,
+.navel-foyos-caracteristicas a,
+.navel.lane-late-caracteristicas a,
+.navel-powell-caracteristicas a,
+.salustiana-caracteristicas a,
+.valencia-late-caracteristicas a,
+.valencia-delta-caracteristicas a
+
+{
+    text-decoration: none;
+    color: red;
+}
+
+.navelina-descripcion p,
+.navel-foyos-descripcion p,
+.navel-lane-late-descripcion p,
+.navel-powell-descripcion p,
+.salustiana-descripcion p,
+.valencia-late-descripcion p,
+.valencia-delta-descripcion p
+{
+    margin: 0 1vw 0 1vw;
+}
+
+h2,
+h3{
+    font-style: italic;
+    margin: 10px 0;
+}
+
+h2{
+    color: rgba(255, 0, 0, .75);
+}
+
+.texto h2{
+    color: white;
+    font-style: normal;
+}
+
+@media screen and (max-width: 649px){
+
+    .texto{
+        height : 8vh;
+    }
+    
+}
+
+@media screen and (max-width: 350px){
+    .navelina-descripcion, 
+    .navelina-caracteristicas,
+    .navel-foyos-descripcion,
+    .navel-foyos-caracteristicas,
+    .navel-lane-late-descripcion,
+    .navel-lane-late-caracteristicas,
+    .navel-powell-descripcion,
+    .navel-powell-caracteristicas,
+    .salustiana-descripcion,
+    .salustiana-caracteristicas,
+    .valencia-late-descripcion,
+    .valencia-late-caracteristicas,
+    .valencia-delta-descripcion,
+    .valencia-delta-caracteristicas
+    {
+        line-height:normal;
+        font-size: 16px;
+    }
+
+    .main{
+        position: relative;
+    }
+
+    .header, .sub-header{
+        justify-items: center;
+    }
+}
+
